@@ -14,3 +14,7 @@ sudo apt install gdebi-core
 wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5033-amd64.deb
 sudo gdebi rstudio-1.2.5033-amd64.deb
 rm rstudio-1.2.5033-amd64.deb
+
+# If you are curious about how to install multiple versions of R see the below links:
+# https://docs.rstudio.com/resources/install-r/
+# https://support.rstudio.com/hc/en-us/articles/360002242413-Multiple-versions-of-R
