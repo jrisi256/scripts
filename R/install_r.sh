@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# For Ubuntu 18.04
+
 # Download and install necessary OS packages
 sudo apt install curl gdebi-core
 
