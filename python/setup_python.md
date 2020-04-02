@@ -16,11 +16,9 @@ So how should one go about installing Python? I would recommend either doing a *
 
 If one absolutely cannot bear the thought of having any more software than absolutely necessary, or you have your own method for managing source installs then feel free to source install whichever version of Python you choose (as well as `pip`).
 
-Let's go over how to do both (instructions below are for Ubuntu 18.04, but it wouldn't be so hard to change them to fit your Linux OS).
-
 ### Source install
 
-The following instructions are just taken *ironically* from [documentation from RStudio](https://docs.rstudio.com/connect/admin/python.html#python-install).
+The steps outlined below are for Ubuntu 18.04, but it wouldn't be so hard to change them to fit your Linux OS. Additionally, the following instructions are taken *ironically* from [documentation from RStudio](https://docs.rstudio.com/connect/admin/python.html#python-install).
 
 First install the dependencies.
 
@@ -28,7 +26,7 @@ First install the dependencies.
 sudo apt install libffi-dev libgdbm-dev libsqlite3-dev libssl-dev zlib1g-dev
 ```
 
-Second download and unpack the source tarball. All Python releases can be found [here](https://www.python.org/ftp/python/) and [here](https://www.python.org/downloads/).
+Second download and unpack the source tarball. All Python releases can be found [here](https://www.python.org/ftp/python/) and [here](https://www.python.org/downloads/). For demonstration purposes, we will be installing Python 3.7.1, but these steps apply regardless of the Python version.
 
 ```bash
 export VERSION=3.7.1 PYTHON_MAJOR=3
@@ -37,7 +35,7 @@ tar -xzvf Python-${VERSION}.tgz
 cd Python-${VERSION}
 ```
 
-Third, you configure, make, and then install. If you want to install into a different location, change the `--prefix` argument. If you are curious about the full range of options available to configure, you can run `./configure --help`.
+Third, you configure, make, and then install. If you want to install into a different location, change the `--prefix` argument. For example, you could do `--prefix=$HOME`. If you are curious about the full range of options available to configure, you can run `./configure --help`.
 
 ```bash
 ./configure --prefix=/opt/Python/${VERSION}
@@ -55,3 +53,7 @@ sudo /opt/Python/${VERSION}/bin/python${PYTHON_MAJOR} get-pip.py
 # Install virtualenv
 sudo /opt/Python/${VERSION}/bin/pip install virtualenv
 ```
+
+Well there is one more final optional step which is to add Python (and all associated commands) to your `PATH`. The usual way of doing this would be by adding the following line to a script called say `python.sh` (it can be called anything you want really): `PATH=/opt/python/3.7.1/bin:$PATH`. Then place this script in `/etc/profile.d` which gets read when creating your `PATH`. Just be **very** careful not to have this conflict with whatever the system has already set up on the `PATH` concerning Python or other versions of Python you might have installed. Check `/usr/bin` to see what python is called there. On Ubuntu 18.04, it is `python3.6` and `python3`. You will then have to restart your computer to see the changes reflected in your `PATH`.
+
+### Miniconda and Anaconda
