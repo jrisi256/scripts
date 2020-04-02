@@ -25,7 +25,6 @@ The following instructions are just taken *ironically* from [documentation from 
 First install the dependencies.
 
 ```bash
-sudo apt build-dep python
 sudo apt install libffi-dev libgdbm-dev libsqlite3-dev libssl-dev zlib1g-dev
 ```
 
