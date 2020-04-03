@@ -2,7 +2,7 @@
 
 It can seem intimidating at first when it comes to setting up your Python environment on a Linux system. Should I use the system version of Python that already comes installed? What's `virtualenv` and how is it different from `venv` and how are **they** different from `pyenv`? Should I use my operating system package manager (e.g. `apt` and `yum`) or `pip` to handle all my Python packages? All these things and more I shall go over in this article.
 
-Note the specific commands I'll be going over are for Ubuntu 18.04, but the principles apply broadly to all Linux systems.
+Note the specific commands I'll be going over are for Ubuntu 18.04, but the principles apply broadly to all Linux systems. It should also be stated these are all my opinions as to what are the best practices for managing and installing Python. There is no, single right answer (sadly). Ultimately, you must figure out for yourself what set of tools and practices work best for you. This guide will hopefully get you there faster and more efficiently and with less breaking things.
 
 ## System Python
 
@@ -85,7 +85,7 @@ rm Miniconda3-py38_4.8.2-Linux-x86_64.sh
 
 #### How to install Python packages
 
-At this point you may have seen people installing Python packages using `pip`, using `conda`, using `easy_intall`, using the OS package manager (e.g. `apt` or `yum`), or some other way entirely. I"m here to tell you that unless you have a good reason otherwise that you should use `pip`. Nowadays `pip` uses **wheels** which are precompiled binaries (before it was installing things from source). `pip` packages comes from PyPI, and this covers practically every Python package imaginable. `pip` also doesn't bundle system-level dependencies into the Python package the way `conda` does. Using `conda` can make the install easier in the short run because of this, but it can lead to issues down the road if you install multiple pieces of the same software unknowingly in different ways (e.g. once using `conda` as a dependency in a precompiled binary and then another time using `apt`).
+At this point you may have seen people installing Python packages using `pip`, using `conda`, using `easy_intall`, using the OS package manager (e.g. `apt` or `yum`), or some other way entirely. I"m here to tell you that unless you have a good reason otherwise that you should use `pip`. Nowadays `pip` uses **wheels** which are precompiled binaries (before it was installing things from source). `pip` packages comes from PyPI, and this covers practically every Python package imaginable. `pip` also doesn't bundle system-level dependencies into the Python package the way `conda` does. Using `conda` can make the install easier in the short run because of this, but it can lead to issues down the road if you install multiple pieces of the same software unknowingly in different ways (e.g. once using `conda` as a dependency in a precompiled binary and then another time using `apt`). This is, of course, an opinionated piece about how to install Python and manage all your packages and what not. Nothing here is technically correct, but in my experience these have been the best practices I have come across. Some people are perfectly fine using `conda`, and that's great! I would caution againsy using `easy_install` or your OS package manager though.
 
 #### End of aside
 
