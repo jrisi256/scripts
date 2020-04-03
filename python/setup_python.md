@@ -54,6 +54,41 @@ sudo /opt/Python/${VERSION}/bin/python${PYTHON_MAJOR} get-pip.py
 sudo /opt/Python/${VERSION}/bin/pip install virtualenv
 ```
 
-Well there is one more final optional step which is to add Python (and all associated commands) to your `PATH`. The usual way of doing this would be by adding the following line to a script called say `python.sh` (it can be called anything you want really): `PATH=/opt/python/3.7.1/bin:$PATH`. Then place this script in `/etc/profile.d` which gets read when creating your `PATH`. Just be **very** careful not to have this conflict with whatever the system has already set up on the `PATH` concerning Python or other versions of Python you might have installed. Check `/usr/bin` to see what python is called there. On Ubuntu 18.04, it is `python3.6` and `python3`. You will then have to restart your computer to see the changes reflected in your `PATH`.
+#### Quick aside about sudo pip
+
+You may see on the internet people arguing back and forth about if it's OK or not to use `sudo pip`. Generally what happens is somebody will be unknowingly mixing up their roles as a user vs. a system administrator. As a result, if you use `sudo pip` once you will probably be cursed to continue using it forever. You also run the risk of at some point updating some package or some dependency of a package that your OS depends on which then runs the risk of corrupting your OS. There is also the security risk which comes with using `sudo` and installing any piece of open source software from the internet.
+
+That being said, I am using `sudo` above because we are installing Python packages into an area that needs `sudo` rights, and because the area is segregated from our system-version of Python, we don't run the risk of polluting our library. If you are still concerned about running `sudo pip` you can always install Python somewhere you don't need `sudo` permissions like `$HOME`.
+
+#### Aside over
+
+Well there is one more final optional step which is to add Python (and all associated commands) to your `PATH`. The usual way of doing this would be by adding the following line to a script called say `python.sh` (it can be called anything you want really): `PATH=/opt/python/3.7.1/bin:$PATH`. Then place this script in `/etc/profile.d` which gets read when creating your `PATH`. Just be careful not to have this conflict with other versions of Python you might have installed. You will then have to restart your computer to see the changes reflected in your `PATH`. I can see why this is appealing for people to be able to easily call `python` or `python3` from the command line. However, I find I get confused after a while unless I'm calling directly from the Python directory so I know explicitly what version of Python or `pip` I'm using.
 
 ### Miniconda and Anaconda
+
+The steps outlined below are for Ubuntu 18.04, but it wouldn't be so hard to change them to fit your Linux OS. Additionally, the following instructions are taken *ironically again* from [documentation from RStudio](https://docs.rstudio.com/resources/install-python/).
+
+First install the dependencies.
+
+```bash
+sudo apt install bzip2 curl
+```
+
+Second download the version of Miniconda which corresponds to the version of Python you want which can be [found here](https://github.com/koverholt/anaconda-version-map). In our example, we will be downloading Python 3.8.1 which corresponds to Miniconda3-py38_4.8.2. The repository of all Anaconda versions can be [found here](https://repo.anaconda.com/archive/), and the repository of all Miniconda versions can be [found here](https://repo.anaconda.com/miniconda/). During installation, you may be asked something along the lines of "“Do you wish the installer to initialize Anaconda3 by running `conda init`?” which I believe means it is asking if you want to add the `conda` commands to your `PATH` which I think should be yes. After installing I run, `conda config --set auto_activate_base false` because I don't want `conda init` to be creating base environments by default when opening up the terminal.
+
+```bash
+curl -O https://repo.anaconda.com/miniconda/Miniconda3-py38_4.8.2-Linux-x86_64.sh
+sudo bash Miniconda3-py38_4.8.2-Linux-x86_64.sh
+conda config --set auto_activate_base false
+rm Miniconda3-py38_4.8.2-Linux-x86_64.sh
+```
+
+#### How to install Python packages
+
+At this point you may have seen people installing Python packages using `pip`, using `conda`, using `easy_intall`, using the OS package manager (e.g. `apt` or `yum`), or some other way entirely. I"m here to tell you that unless you have a good reason otherwise that you should use `pip`. Nowadays `pip` uses **wheels** which are precompiled binaries (before it was installing things from source). `pip` packages comes from PyPI, and this covers practically every Python package imaginable. `pip` also doesn't bundle system-level dependencies into the Python package the way `conda` does. Using `conda` can make the install easier in the short run because of this, but it can lead to issues down the road if you install multiple pieces of the same software unknowingly in different ways (e.g. once using `conda` as a dependency in a precompiled binary and then another time using `apt`).
+
+#### End of aside
+
+The final, optional step like [mentioned above for installing from source](#aside-over) would be to add our new executable files to the `PATH`. The steps are the same as the ones from when installing from source.
+
+# TO DO write about Jupyter and write about virtualenv, venv, pyenv, etc. etc. etc.
