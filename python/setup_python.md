@@ -86,10 +86,6 @@ And that's it. See [above](#aside-over) on how to add Python to your `PATH`.
 
 At this point you may have seen people installing Python packages using `pip`, using `conda`, using `easy_intall`, using the OS package manager (e.g. `apt` or `yum`), or some other way entirely. I"m here to tell you that unless you have a good reason otherwise that you should use `pip`. Nowadays `pip` uses **wheels** which are precompiled binaries (before `pip` was installing things from source). `pip` packages comes from PyPI, and this covers practically every Python package imaginable. `pip` also doesn't bundle system-level dependencies into the Python package the way `conda` does. Using `conda` can make the install easier in the short run because of this, but it can lead to issues down the road if you install multiple pieces of the same software unknowingly in different ways (e.g. once using `conda` as a dependency in a precompiled binary and then another time using `apt`). This is, of course, an opinionated piece about how to install Python and manage all your packages and what not. Nothing here is technically correct, but in my experience these have been the best practices I have come across. Some people are perfectly fine using `conda`, and that's great! I would caution against using `easy_install` or your OS package manager though. Regardless of whatever you choose, stick with it and only use that one package manager to manage your Python packages. It can very quickly become a nightmare to try and manage Python packages installed using different package managers.
 
-#### End of aside
-
-The final, optional step like [mentioned above for installing from source](#aside-over) would be to add our new executable files to the `PATH`. The steps are the same as the ones from when installing from source.
-
 ## Installing Jupyter
 
 If you installed Anaconda, you can skip this step. However, if you installed Miniconda or Python from source you'll have to do these steps. That is assuming you want Jupyter installed which I think you should. Their products have made it much easier and more enjoyable for me to program in Python.
