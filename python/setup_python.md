@@ -43,15 +43,12 @@ make
 sudo make install
 ```
 
-The final step is to install `pip` and `virtualenv`.
+The final step is to install `pip`.
 
 ```bash
 # Install pip
 wget https://bootstrap.pypa.io/get-pip.py
 sudo /opt/Python/${VERSION}/bin/python${PYTHON_MAJOR} get-pip.py
-
-# Install virtualenv
-sudo /opt/Python/${VERSION}/bin/pip install virtualenv
 ```
 
 #### Quick aside about sudo pip
