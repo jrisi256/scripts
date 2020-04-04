@@ -55,7 +55,7 @@ sudo /opt/Python/${VERSION}/bin/python${PYTHON_MAJOR} get-pip.py
 
 You may see on the internet people arguing back and forth about if it's OK or not to use `sudo pip`. Generally what happens is somebody will be unknowingly mixing up their roles as a user vs. a system administrator. As a result, if you use `sudo pip` once you will probably be cursed to continue using it forever. You also run the risk of at some point updating some package or some dependency of a package that your OS depends on which then runs the risk of corrupting your OS. There is also the security risk which comes with using `sudo` and installing any piece of open source software from the internet.
 
-That being said, I am using `sudo` above because we are installing Python packages into an area that needs `sudo` rights, and because the area is segregated from our system-version of Python, we don't run the risk of polluting our library. If you are still concerned about running `sudo pip` you can always install Python somewhere you don't need `sudo` permissions like `$HOME`.
+That being said, I am using `sudo` in this tutorial because we are installing Python packages into an area that needs `sudo` rights, and because the area is segregated from our system-version of Python, we don't run the risk of polluting our library. If you are still concerned about running `sudo pip` you can always install Python somewhere you don't need `sudo` permissions like `$HOME`.
 
 #### Aside over
 
