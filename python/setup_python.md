@@ -83,7 +83,7 @@ conda config --set auto_activate_base false
 rm Miniconda3-py38_4.8.2-Linux-x86_64.sh
 ```
 
-And that's it. See how [above](#aside-over) on how to add Python to your `PATH`.
+And that's it. See [above](#aside-over) on how to add Python to your `PATH`.
 
 #### How to install Python packages
 
