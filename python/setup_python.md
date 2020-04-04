@@ -167,4 +167,4 @@ sudo /path/to/env_name/bin/pip install ipykernel
 
 ## Conclusion
 
-Wow, we went over a lot. Hopefully you understand by the end of this opinionated guide how to set-up Python, Jupyter, `pip`, and `virtualenv` for your system. You should feel confident and ready to start programming in Python! Check out my `setup_python.sh` script to see how I set-up Python at home. Make sure you add the directory where you want Python installed when calling the script e.g. `./setup_python.sh /opt/python/3.8.1/`.
+Wow, we went over a lot. Hopefully you understand by the end of this opinionated guide how to set-up Python, Jupyter, `pip`, and `virtualenv` for your system. You should feel confident and ready to start programming in Python! Check out my `setup_python.sh` script to see how I set-up Python at home. Make sure you add the directory where you want Python installed when calling the script e.g. `./setup_python.sh /opt/python/3.8.1`.
