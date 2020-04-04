@@ -59,7 +59,7 @@ That being said, I am using `sudo` in this tutorial because we are installing Py
 
 #### Aside over
 
-Well there is one more final optional step which is to add Python (and all associated commands) to your `PATH`. The usual way of doing this would be by adding the following line to a script called say `python.sh` (it can be called anything you want really): `PATH=/opt/python/3.7.1/bin:$PATH`. Then place this script in `/etc/profile.d` which gets read when creating your `PATH`. Just be careful not to have this conflict with other versions of Python you might have installed. You would then run `source /etc/profile.d/python.sh` to see the changes reflected in your `PATH`.
+Well there is one more final optional step which is to add Python (and all associated commands) to your `PATH`. The usual way of doing this would be by adding the following line to a script called say `python.sh` (it can be called anything you want really): `PATH=/opt/python/3.7.1/bin:$PATH`. Then place this script in `/etc/profile.d` which gets read when creating your `PATH`. Just be careful not to have this conflict with other versions of Python you might have installed. You would then run `source /etc/profile.d/python.sh` to see the changes reflected in your `PATH` (you'll have to restart your computer for it to be permanent and not just for your current shell session).
 
 ### Miniconda and Anaconda
 

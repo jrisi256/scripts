@@ -14,7 +14,9 @@ rm Miniconda3-py38_4.8.2-Linux-x86_64.sh
 touch python.sh
 echo PATH=$1/bin:'$PATH' >> python.sh
 sudo mv python.sh /etc/profile.d/
-source /etc/profile.d/python.sh # This doesn't propagate up to our current shell environment so you'll have to run it manually as well
+
+# This doesn't propagate up to our current shell environment so you'll have to run it manually (or restart for it to be permanent)
+source /etc/profile.d/python.sh
 
 # Turn off conda automatically activating its environment
 conda config --set auto_activate_base false
