@@ -53,7 +53,7 @@ Similar to Renvirons, a site-wide Rprofile and EITHER an R project Rprofile or u
 
 * [Official documentation from R concerning its start-up process around Rprofiles and Renvirons](https://stat.ethz.ch/R-manual/R-devel/library/base/html/Startup.html)
 * [Excerpt from the *Efficient R Programming* book concerning Rprofiles and Renvirons](https://csgillespie.github.io/efficientR/set-up.html#r-startup)
-    + Here is an [additional excerpt](book.https://csgillespie.github.io/efficientR/3-3-r-startup.html#r-startup) from an older (I think) version of the book.
+    + Here is an [additional excerpt](https://csgillespie.github.io/efficientR/3-3-r-startup.html#r-startup) from an older (I think) version of the book.
 * [Deeper dive on Rprofiles and Renvirons provided by RStudio](https://rviews.rstudio.com/2017/04/19/r-for-enterprise-understanding-r-s-startup/). It goes into some interesting use cases for Rprofiles and Renvirons.
 * [Excerpt from the *What They Forgot To Teach You About R* Book concerning Rprofiles and Renvirons](https://rstats.wtf/r-startup.html). It has a very useful (although intimidating at first glance) diagram of R's start-up process.
 * [For the curious who are interested in using environment variables in the OS](https://devconnected.com/how-to-set-and-unset-environment-variables-on-linux/)
