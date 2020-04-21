@@ -114,7 +114,7 @@ This is where `renv` comes into play.
 
 ### How renv works
 
-In a bit of a chicken-and-egg problem, I believe one has to install `renv` into their local library to get the ball rolling. Once one has it set-up with their project, they can delete their local installation. One of the main points of `renv` (as far as I can tell) is to create project-level libraries which are segregated from each other and don't pollute each other so to speak. This makes maintaining a local library which spans across all projects a bit unnecessary it seems to me. I guess I could envision some use cases here and there. Really though it seems like for a variety of the work one does in R one should be doing it in an R project using `renv`.
+In a bit of a chicken-and-egg problem, I believe one has to install `renv` into their local library to get the ball rolling. Once one has it set-up with their project, they can delete their local installation. One of the main points of `renv` (as far as I can tell) is to create project-level libraries which are segregated from each other and don't pollute each other so to speak. This makes maintaining a local library which spans across all projects a bit unnecessary it seems to me. I guess I could envision some use cases here and there. Really though it seems like for most of the work one does in R one should be doing it in an R project using `renv`.
 
 Before we really dig in, I'll just note almost all of my notes are coming from the documentation itself for `renv` which [I link to below](#links-to-renv-documentation). I really recommend everyone read it. It's superbly written and communicates quite clearly what `renv` is doing.
 
