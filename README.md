@@ -25,3 +25,9 @@ git config --global user.name "Your Name"
 ```
 
 Everything else should be automated.
+
+## Renaming master to main
+
+For a variety of reasons, it seems appropriate to change the "master" branch to the "main" branch. Thankfully this is very easy to do. You can even create a new branch based off of master through (the Github interface)[https://twitter.com/peduarte/status/1271340563493720064]. You will need to run `git pull` to pull in the new branch if you created it through Github.
+
+Once you've made your new `main` branch the default branch, you can delete the old `master` branch. To delete the branch locally run, `git branch -d master`. To delete the branch on Github, run `git push origin --delete master`.
