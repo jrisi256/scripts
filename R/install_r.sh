@@ -5,8 +5,8 @@
 # Download and install necessary OS packages
 sudo apt install curl gdebi-core
 
-# Necessary for curl package in R
-sudo apt install libcurl4-openssl-dev
+# Necessary for curl, openssl package in R
+sudo apt install libcurl4-openssl-dev libssl-dev
 
 # Download and install the prepackaged binaries
 curl -O https://cdn.rstudio.com/r/ubuntu-1804/pkgs/r-$1_1_amd64.deb
