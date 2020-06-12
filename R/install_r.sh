@@ -11,5 +11,5 @@ sudo gdebi r-$1_1_amd64.deb
 rm r-$1_1_amd64.deb
 
 # Create sym links to the executables to ensure R is available on the default system PATH variable
-sudo ln -s /opt/R/$1/bin/R /usr/local/bin/R
-sudo ln -s /opt/R/$1/bin/Rscript /usr/local/bin/Rscript
+sudo ln -sf /opt/R/$1/bin/R /usr/local/bin/R
+sudo ln -sf /opt/R/$1/bin/Rscript /usr/local/bin/Rscript
