@@ -6,4 +6,4 @@
 sudo apt install gdebi-core
 wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.3.959-amd64.deb
 sudo gdebi rstudio-1.2.5033-amd64.deb
-rm rstudio-1.2.5033-amd64.deb
+rm rstudio-1.3.959-amd64.deb
