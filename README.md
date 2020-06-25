@@ -30,4 +30,9 @@ Everything else should be automated.
 
 For a variety of reasons, it seems appropriate to change the "master" branch to the "main" branch. Thankfully this is very easy to do. You can even create a new branch based off of master through (the Github interface)[https://twitter.com/peduarte/status/1271340563493720064]. You will need to run `git pull` to pull in the new branch if you created it through Github.
 
-Once you've made your new `main` branch the default branch, you can delete the old `master` branch. To delete the branch locally run, `git branch -d master`. To delete the branch on Github, run `git push origin --delete master`.
+Once you've made your new `main` branch the default branch, you can delete the old `master` branch.
+
+* To delete the branch locally run, `git branch -d master`. 
+* To delete the branch on Github, run `git push origin --delete master`.
+* To reset HEAD, `git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main`. (See here for more details)[https://stackoverflow.com/questions/45811971/warning-ignoring-broken-ref-refs-remotes-origin-head].
+* To delete stale branches, `git remote prune origin`. (See here for more details)[https://git-scm.com/docs/git-remote].
