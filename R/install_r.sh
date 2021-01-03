@@ -5,6 +5,9 @@
 # Download and install necessary OS packages
 sudo apt install curl gdebi-core
 
+# Download and install for geospatial R packages
+sudo apt install libgdal-dev
+
 # Necessary for curl, openssl package in R
 sudo apt install libcurl4-openssl-dev libssl-dev
 
