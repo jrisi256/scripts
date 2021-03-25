@@ -5,6 +5,9 @@
 # Download and install necessary OS packages
 sudo apt install curl gdebi-core
 
+# Necessary for regressions
+sudo apt install libv8-dev
+
 # Download and install for geospatial R packages
 sudo apt install libgdal-dev libudunits2-dev
 
