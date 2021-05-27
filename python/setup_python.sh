@@ -3,7 +3,7 @@
 # For Ubuntu 18.04
 
 # Install dependencies
-sudo apt install bzip2 curl
+sudo apt install bzip2 curl default-jre
 
 # Download and install Miniconda
 curl -O https://repo.anaconda.com/miniconda/Miniconda3-py38_4.8.2-Linux-x86_64.sh
