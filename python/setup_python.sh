@@ -5,6 +5,9 @@
 # Install dependencies
 sudo apt install bzip2 curl default-jre
 
+# Install dependencies for handling PDFs
+sudo apt install libpoppler-cpp-dev
+
 # Download and install Miniconda
 curl -O https://repo.anaconda.com/miniconda/Miniconda3-py38_4.8.2-Linux-x86_64.sh
 bash Miniconda3-py38_4.8.2-Linux-x86_64.sh -p $1
