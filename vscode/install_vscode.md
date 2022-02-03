@@ -20,3 +20,4 @@ There are a number of extensions I've added to Visual Studio Code overtime to im
 ## Json Viewer
 
 * To install, `ext install ZainChen.json`
+* To install, `ext install ccimage.jsonviewer`
