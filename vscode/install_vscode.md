@@ -16,3 +16,7 @@ There are a number of extensions I've added to Visual Studio Code overtime to im
 ## Markdown linter
 
 * To install, `ext install markdownlint`
+
+## Json Viewer
+
+* To install, `ext install ZainChen.json`
