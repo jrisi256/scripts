@@ -21,3 +21,7 @@ There are a number of extensions I've added to Visual Studio Code overtime to im
 
 * To install, `ext install ZainChen.json`
 * To install, `ext install ccimage.jsonviewer`
+
+## CSV and TSV Viewer
+
+* To install, `ext install GrapeCity.gc-excelviewer`
