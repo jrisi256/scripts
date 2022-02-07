@@ -25,3 +25,7 @@ There are a number of extensions I've added to Visual Studio Code overtime to im
 ## CSV and TSV Viewer
 
 * To install, `ext install GrapeCity.gc-excelviewer`
+
+## XML Viewer
+
+* To install, `ext install PrateekMahendrakar.prettyxml`
