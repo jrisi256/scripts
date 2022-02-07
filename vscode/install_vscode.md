@@ -28,4 +28,4 @@ There are a number of extensions I've added to Visual Studio Code overtime to im
 
 ## XML Viewer
 
-* To install, `ext install PrateekMahendrakar.prettyxml`
+* To install, `ext install mikeburgh.xml-format`
