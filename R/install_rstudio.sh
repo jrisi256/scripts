@@ -4,6 +4,6 @@
 
 # Install Rstudio, I install the .deb because it's easier than downloading the tarball (which would require configure/make)
 sudo apt install gdebi-core
-wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.4.1106-amd64.deb
-sudo gdebi rstudio-1.4.1106-amd64.deb
-rm rstudio-1.4.1106-amd64.deb
+wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-2022.02.0-443-amd64.deb
+sudo gdebi rstudio-2022.02.0-443-amd64.deb
+rm rstudio-2022.02.0-443-amd64.deb
