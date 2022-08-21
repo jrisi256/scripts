@@ -9,9 +9,9 @@ sudo apt install bzip2 curl default-jre
 sudo apt install libpoppler-cpp-dev
 
 # Download and install Miniconda
-curl -O https://repo.anaconda.com/miniconda/Miniconda3-py38_4.8.2-Linux-x86_64.sh
-bash Miniconda3-py38_4.8.2-Linux-x86_64.sh -p $1
-rm Miniconda3-py38_4.8.2-Linux-x86_64.sh
+curl -O https://repo.anaconda.com/miniconda/Miniconda3-py39_4.12.0-Linux-x86_64.sh
+bash Miniconda3-py39_4.12.0-Linux-x86_64.sh -p $1
+rm Miniconda3-py39_4.12.0-Linux-x86_64.sh
 
 # Add Python (and related commands) to our PATH
 touch python.sh

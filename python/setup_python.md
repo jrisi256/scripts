@@ -18,7 +18,7 @@ If one absolutely cannot bear the thought of having any more software than absol
 
 ### Source install
 
-The steps outlined below are for Ubuntu 18.04, but it wouldn't be so hard to change them to fit your Linux OS. Additionally, the following instructions are taken *ironically* from [documentation from RStudio](https://docs.rstudio.com/connect/admin/python.html#python-install).
+The steps outlined below are for Ubuntu 18.04, but it wouldn't be so hard to change them to fit your Linux OS. Additionally, the following instructions are taken *ironically* from [documentation from RStudio](https://docs.rstudio.com/resources/install-python-source/).
 
 First install the dependencies.
 
@@ -156,7 +156,7 @@ We will then navigate to our folder of choice and type in the command `virtualen
 
 It's pretty simple honestly.
 
-#### Fun bonus on creating a kernel for your virtual environment.
+#### Fun bonus on creating a kernel for your virtual environment
 
 You would just have to follow the [steps above](#how-to-install-more-than-one-kernel) for installing a kernel for a different version of Python! It's very simple and fun. How would that look like specifically? I can give a quick example for us. This allows us to program in our virtual environment without having to activate it necessarily (all from within a Jupyter environment).
 
