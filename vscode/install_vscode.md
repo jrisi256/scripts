@@ -29,3 +29,7 @@ There are a number of extensions I've added to Visual Studio Code overtime to im
 ## XML Viewer
 
 * To install, `ext install mikeburgh.xml-format`
+
+## Python
+
+* Official Python support from Microsoft, `ext install ms-python.python`
