@@ -17,6 +17,12 @@ sudo apt install libcurl4-openssl-dev libssl-dev
 # Necessary for xml2, systemfonts, and gdtools packages in R which are used in flextable
 sudo apt install libxml2-dev libfontconfig1-dev libcairo2-dev
 
+# Install for the magick package
+sudo apt install libmagick++-dev
+
+# Install to be able to use some more sophisticated functionality of igraph
+sudo apt install libglpk-dev
+
 # Install LaTeX on for Ubuntu which is necessary for to knit RMarkdown files to PDF
 sudo apt install texlive-base texlive-science texlive texlive-latex-recommended texlive-latex-extra
 
