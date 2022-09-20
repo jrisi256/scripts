@@ -8,6 +8,10 @@ sudo apt install bzip2 curl default-jre
 # Install dependencies for handling PDFs
 sudo apt install libpoppler-cpp-dev
 
+# Download and install gecko webdriver - https://github.com/mozilla/geckodriver/releases
+# Just download it somewhere, unload the tarball, then add it to the system path
+# I just moved the file /usr/local/bin
+
 # Download and install Miniconda
 curl -O https://repo.anaconda.com/miniconda/Miniconda3-py39_4.12.0-Linux-x86_64.sh
 bash Miniconda3-py39_4.12.0-Linux-x86_64.sh -p $1
