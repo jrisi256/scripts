@@ -26,6 +26,9 @@ sudo apt install libglpk-dev
 # Install LaTeX on for Ubuntu which is necessary for to knit RMarkdown files to PDF
 sudo apt install texlive-base texlive-science texlive texlive-latex-recommended texlive-latex-extra texlive-xetex
 
+# Install for devtools
+sudo apt install libharfbuzz-dev libfribidi-dev
+
 # Download and install the prepackaged binaries
 curl -O https://cdn.rstudio.com/r/ubuntu-1804/pkgs/r-$1_1_amd64.deb
 sudo gdebi r-$1_1_amd64.deb
