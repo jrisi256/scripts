@@ -21,7 +21,7 @@ sudo apt install libxml2-dev libfontconfig1-dev libcairo2-dev
 sudo apt install libmagick++-dev
 
 # Install to be able to use some more sophisticated functionality of igraph and more sophisticated network modeling
-sudo apt install libglpk-dev cmake
+sudo apt install libglpk-dev cmake libgsl-dev
 
 # Install LaTeX on for Ubuntu which is necessary for to knit RMarkdown files to PDF
 sudo apt install texlive-base texlive-science texlive texlive-latex-recommended texlive-latex-extra texlive-xetex
