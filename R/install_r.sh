@@ -1,39 +1,16 @@
 #!/bin/bash
 
-# For Ubuntu 20.04
-
-# Download and install necessary OS packages
-sudo apt install curl gdebi-core
-
-# Necessary for regressions
-sudo apt install libv8-dev
-
-# Download and install for geospatial R packages
-sudo apt install libgdal-dev libudunits2-dev
-
-# Necessary for curl, openssl package in R
-sudo apt install libcurl4-openssl-dev libssl-dev
-
-# Necessary for xml2, systemfonts, and gdtools packages in R which are used in flextable
-sudo apt install libxml2-dev libfontconfig1-dev libcairo2-dev
-
-# Install for the magick package
-sudo apt install libmagick++-dev
-
-# Install to be able to use some more sophisticated functionality of igraph and more sophisticated network modeling
-sudo apt install libglpk-dev cmake libgsl-dev
-
-# Install LaTeX on for Ubuntu which is necessary for to knit RMarkdown files to PDF
-sudo apt install texlive-base texlive-science texlive texlive-latex-recommended texlive-latex-extra texlive-xetex
-
-# Install for devtools
-sudo apt install libharfbuzz-dev libfribidi-dev
+# Argument 1 is the OS, for example ubuntu-2204.
+# Argument 2 is the verison of R, for example 4.2.2
 
 # Download and install the prepackaged binaries
-curl -O https://cdn.rstudio.com/r/ubuntu-1804/pkgs/r-$1_1_amd64.deb
-sudo gdebi r-$1_1_amd64.deb
-rm r-$1_1_amd64.deb
+curl -O https://cdn.rstudio.com/r/$1/pkgs/r-$2_1_amd64.deb
+sudo gdebi r-$2_1_amd64.deb
+rm r-$2_1_amd64.deb
 
 # Create sym links to the executables to ensure R is available on the default system PATH variable
-sudo ln -sf /opt/R/$1/bin/R /usr/local/bin/R
-sudo ln -sf /opt/R/$1/bin/Rscript /usr/local/bin/Rscript
+sudo ln -sf /opt/R/$2/bin/R /usr/local/bin/R
+sudo ln -sf /opt/R/$2/bin/Rscript /usr/local/bin/Rscript
+
+# Install R Packages which are used across all R projects
+R -e 'install.packages(c("devtools", "renv", "markdown", "rmarkdown", "lintr"), repos = "http://cran.us.r-project.org")'

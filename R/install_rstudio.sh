@@ -1,9 +1,8 @@
 #!/bin/bash
 
-# For Ubuntu 18.04
+# Argument 1 is the OS, for example jammy.
+# Argument 2 is the version of RStudio, for example 2022.12.0-353.
 
-# Install Rstudio, I install the .deb because it's easier than downloading the tarball (which would require configure/make)
-sudo apt install gdebi-core
-wget https://download1.rstudio.org/electron/jammy/amd64/rstudio-2022.12.0-353-amd64.deb
-sudo gdebi rstudio-2022.12.0-353-amd64.deb
-rm rstudio-2022.12.0-353-amd64.deb
+wget https://download1.rstudio.org/electron/$1/amd64/rstudio-$2-amd64.deb
+sudo gdebi rstudio-$2-amd64.deb
+rm rstudio-$2-amd64.deb
