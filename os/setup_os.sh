@@ -70,6 +70,11 @@ mv broot /usr/local/bin
 sudo pro config set apt_news=false
 sudo rm /etc/apt/apt.conf.d/20apt-esm-hook.conf
 
+# Download Zoom
+wget https://zoom.us/client/5.13.7.683/zoom_amd64.deb
+sudo apt install ./zoom_amd64.deb
+sudo rm zoom_amd64.deb
+
 # Download copyq which keeps track of clipboard.
 sudo add-apt-repository ppa:hluk/copyq
 sudo apt update
