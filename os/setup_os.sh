@@ -97,6 +97,10 @@ ln -s /opt/Zotero_linux-x86_64/zotero.desktop ~/.local/share/applications/zotero
 
 # I downloaded Spotify, OnlyOffice, and Discord from the Ubuntu App Store.
 # For VS Code, I downloaded the .deb file from their website. Then, I installed used gdebi.
+# use the below commands if the snap version of spotify does not work.
+# curl -sS https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
+# echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+# sudo apt install spotify-client
 
 # Need to download the deb version of Firefox.
 sudo snap remove firefox
