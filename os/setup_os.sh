@@ -71,8 +71,9 @@ mv broot /usr/local/bin
 sudo pro config set apt_news=false
 sudo rm /etc/apt/apt.conf.d/20apt-esm-hook.conf
 
-# Download Zoom
-wget https://zoom.us/client/5.13.7.683/zoom_amd64.deb
+# Download Zoom, the version number needs to be updated.
+# https://zoom.us/download?os=linux
+wget https://zoom.us/client/5.14.0.1720/zoom_amd64.deb
 sudo apt install ./zoom_amd64.deb
 sudo rm zoom_amd64.deb
 
