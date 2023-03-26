@@ -41,6 +41,7 @@ sudo apt install libharfbuzz-dev libfribidi-dev
 
 ############################################################################### Programs
 # Various programs and system utilities. 
+sudo apt install git
 sudo apt install gimp
 sudo apt install vlc
 sudo apt install gnome-sushi
@@ -93,7 +94,7 @@ sudo mv Zotero_linux-x86_64 /opt
 /opt/Zotero_linux-x86_64/set_launcher_icon
 ln -s /opt/Zotero_linux-x86_64/zotero.desktop ~/.local/share/applications/zotero.desktop
 
-# I downloaded Spotify and OnlyOffice from the Ubuntu App Store.
+# I downloaded Spotify, OnlyOffice, and Discord from the Ubuntu App Store.
 # For VS Code, I downloaded the .deb file from their website. Then, I installed used gdebi.
 
 # Need to download the deb version of Firefox.
