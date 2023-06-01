@@ -95,6 +95,11 @@ sudo mv Zotero_linux-x86_64 /opt
 /opt/Zotero_linux-x86_64/set_launcher_icon
 ln -s /opt/Zotero_linux-x86_64/zotero.desktop ~/.local/share/applications/zotero.desktop
 
+# Install Obsidian
+wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.3.5/obsidian_1.3.5_amd64.deb
+sudo dpkg -i install obsidian_1.3.5_amd64.deb
+rm obsidian_1.3.5_amd64.deb
+
 # I downloaded Spotify, OnlyOffice, and Discord from the Ubuntu App Store.
 # For VS Code, I downloaded the .deb file from their website. Then, I installed used gdebi.
 # use the below commands if the snap version of spotify does not work.
