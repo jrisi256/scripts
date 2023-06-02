@@ -2,7 +2,7 @@
 
 It can seem intimidating at first when it comes to setting up your Python environment on a Linux system. Should I use the system version of Python that already comes installed? What's `virtualenv` and how is it different from `venv` and how are **they** different from `pyenv`? Should I use my operating system package manager (e.g. `apt` and `yum`) or `pip` to handle all my Python packages? All these things and more I shall go over in this article.
 
-Note the specific commands I'll be going over are for Ubuntu 18.04, but the principles apply broadly to all Linux systems. It should also be stated these are all my opinions as to what are the best practices for managing and installing Python. There is no, single right answer (sadly). Ultimately, you must figure out for yourself what set of tools and practices work best for you. This guide will hopefully get you there faster and more efficiently and with less things breaking.
+Note the specific commands I'll be going over are for Ubuntu, but the principles apply broadly to all Linux systems. It should also be stated these are all my opinions as to what are the best practices for managing and installing Python. There is no, single right answer (sadly). Ultimately, you must figure out for yourself what set of tools and practices work best for you. This guide will hopefully get you there faster and more efficiently and with less things breaking.
 
 ## System Python
 
@@ -10,15 +10,17 @@ You'll notice on your Linux operating system that you already have Python instal
 
 For similar reasons, I am going to caution against downloading Python binaries using your OS package repository (e.g. `yum`, `apt`). While it, of course, segregates any new version of Python downloaded this way from the system-level version of Python, I have found the two installations are still *close*. What do I mean by that? They have similarly named directories and paths basically, and it can very quickly become difficult to keep track of. My head starts spinning just thinking about `/usr/lib/python3.x/dist-pacakges` vs. `/usr/local/lib/python3.y/site-packages`.
 
-## Source install and Anaconda
+## Source install, RStudio/Posit, and Anaconda
 
-So how should one go about installing Python? I would recommend either doing a **source install** or install using **Miniconda**. I like to think of Miniconda as its own precompiled binary version of Python that we have more control over how to install (versus installing using the binaries from our OS package repository). I prefer Miniconda to Anaconda because Anaconda is bloated in a lot of ways, and it contains a lot of packages and dependencies you might not want to deal with. For most people who want to go about life without *ever* having to worry about their environment too much, Anaconda might be a better option. I prefer the minimalist route however so I only install what I need when I need it.
+So how should one go about installing Python? I would recommend either doing a **source install** or an install using the pre-compiled binaries provided by **Posit/RStudio**. The benefits of installing from source is that it gives one full control over the installation process, and one will have access to the latest versions of Python as soon as they are available. However, it is also the most laborious process because one has full control over the entire installation process, and one has to compile the code themselves. For this reason, I use the pre-compiled binaries provided by Posit/RStudio. The downside is you will not have access to the latest versions of Python immediately (although in my experience the lag time is not that long). The upside is that the installation process becomes much, much easier.
 
-If one absolutely cannot bear the thought of having any more software than absolutely necessary, or you have your own method for managing source installs then feel free to source install whichever version of Python you choose (as well as `pip`).
+Then there is **Anaconda**. I generally do not like Anaconda because I think it takes away **too much control** from the end user. It also introduces a lot of bloat by downloading software and Python packages the end user may not ultimately need or want. For a long time, though, I did use Miniconda which is **only** the precompiled binaries for Python and none of the bloat from a full Anaconda installation. However, ever since Posit/RStudio started making their own binaries available, I started using those for no really good discernible reason.
+
+For the purposes of this tutorial, though, I will be downloading the binaries from RStudio, but the steps (I think) would be largely similar to how a Miniconda installation would flow.
 
 ### Source install
 
-The steps outlined below are for Ubuntu 18.04, but it wouldn't be so hard to change them to fit your Linux OS. Additionally, the following instructions are taken *ironically* from [documentation from RStudio](https://docs.rstudio.com/resources/install-python-source/).
+The steps outlined below are for Ubuntu, but it wouldn't be so hard to change them to fit your Linux OS. Additionally, the following instructions are taken from [documentation from RStudio](https://docs.rstudio.com/resources/install-python-source/).
 
 First install the dependencies.
 
@@ -61,9 +63,9 @@ That being said, I am using `sudo` in this tutorial because we are installing Py
 
 Well there is one more final optional step which is to add Python (and all associated commands) to your `PATH`. The usual way of doing this would be by adding the following line to a script called say `python.sh` (it can be called anything you want really): `PATH=/opt/python/3.7.1/bin:$PATH`. Then place this script in `/etc/profile.d` which gets read when creating your `PATH`. Just be careful not to have this conflict with other versions of Python you might have installed. You would then run `source /etc/profile.d/python.sh` to see the changes reflected in your `PATH` (you'll have to restart your computer for it to be permanent and not just for your current shell session).
 
-### Miniconda and Anaconda
+### Pre-compiled binaries from Posit/RStudio
 
-The steps outlined below are for Ubuntu 18.04, but it wouldn't be so hard to change them to fit your Linux OS. Additionally, the following instructions are taken *ironically again* from [documentation from RStudio](https://docs.rstudio.com/resources/install-python/).
+The steps outlined below are for Ubuntu, but it wouldn't be so hard to change them to fit your Linux OS. Additionally, the following instructions are taken from [documentation from RStudio](https://docs.rstudio.com/resources/install-python/).
 
 First install the dependencies.
 
@@ -71,24 +73,23 @@ First install the dependencies.
 sudo apt install bzip2 curl
 ```
 
-Second download the version of Miniconda which corresponds to the version of Python you want which can be [found here](https://github.com/koverholt/anaconda-version-map). In our example, we will be downloading Python 3.8.1 which corresponds to `Miniconda3-py38_4.8.2`. The repository of all Anaconda versions can be [found here](https://repo.anaconda.com/archive/), and the repository of all Miniconda versions can be [found here](https://repo.anaconda.com/miniconda/). During installation, you may be asked something along the lines of "“Do you wish the installer to initialize Anaconda3 by running `conda init`?” which I believe means it is asking if you want to add the `conda` commands to your `PATH` which I think should be yes. After installing I run, `conda config --set auto_activate_base false` because I don't want `conda init` to be creating base environments by default when opening up the terminal.
+Second download the version of Python you would like.
 
 ```bash
-curl -O https://repo.anaconda.com/miniconda/Miniconda3-py38_4.8.2-Linux-x86_64.sh
-sudo bash Miniconda3-py38_4.8.2-Linux-x86_64.sh
-conda config --set auto_activate_base false
-rm Miniconda3-py38_4.8.2-Linux-x86_64.sh
+curl -O https://cdn.rstudio.com/python/ubuntu-2204/pkgs/python-3.8.1_1_amd64.deb
+sudo gdebi python-3.11.0_1_amd64.deb
+rm python-3.11.0_1_amd64.deb
 ```
 
 And that's it. See [above](#aside-over) on how to add Python to your `PATH`.
 
 #### How to install Python packages
 
-At this point you may have seen people installing Python packages using `pip`, using `conda`, using `easy_intall`, using the OS package manager (e.g. `apt` or `yum`), or some other way entirely. I"m here to tell you that unless you have a good reason otherwise that you should use `pip`. Nowadays `pip` uses **wheels** which are precompiled binaries (before `pip` was installing things from source). `pip` packages comes from PyPI, and this covers practically every Python package imaginable. `pip` also doesn't bundle system-level dependencies into the Python package the way `conda` does. Using `conda` can make the install easier in the short run because of this, but it can lead to issues down the road if you install multiple pieces of the same software unknowingly in different ways (e.g. once using `conda` as a dependency in a precompiled binary and then another time using `apt`). This is, of course, an opinionated piece about how to install Python and manage all your packages and what not. Nothing here is technically correct, but in my experience these have been the best practices I have come across. Some people are perfectly fine using `conda`, and that's great! I would caution against using `easy_install` or your OS package manager though. Regardless of whatever you choose, stick with it and only use that one package manager to manage your Python packages. It can very quickly become a nightmare to try and manage Python packages installed using different package managers.
+At this point you may have seen people installing Python packages using `pip`, using `conda`, using `easy_intall`, using the OS package manager (e.g. `apt` or `yum`), or some other way entirely. I"m here to tell you that unless you have a good reason otherwise that you should use `pip`. Nowadays `pip` uses **wheels** which are pre-compiled binaries (before `pip` was installing things from source). `pip` packages comes from PyPI, and this covers practically every Python package imaginable. `pip` also doesn't bundle system-level dependencies into the Python package the way `conda` does. Using `conda` can make the install easier in the short run because of this, but it can lead to issues down the road if you install multiple pieces of the same software unknowingly in different ways (e.g. once using `conda` as a dependency in a pre-compiled binary and then another time using `apt`). This is, of course, an opinionated piece about how to install Python and manage all your packages and what not. Nothing here is technically correct, but in my experience these have been the best practices I have come across. Some people are perfectly fine using `conda`, and that's great! I would caution against using `easy_install` or your OS package manager though. Regardless of whatever you choose, stick with it and only use that one package manager to manage your Python packages. It can very quickly become a nightmare to try and manage Python packages installed using different package managers.
 
 ## Installing Jupyter
 
-If you installed Anaconda, you can skip this step. However, if you installed Miniconda or Python from source you'll have to do these steps. That is assuming you want Jupyter installed which I think you should. Their products have made it much easier and more enjoyable for me to program in Python.
+If you installed Anaconda, you can skip this step. However, if you installed Miniconda, Posit/RStudio or Python from source you'll have to do these steps. That is assuming you want Jupyter installed which I think you should. Their products have made it much easier and more enjoyable for me to program in Python.
 
 Perhaps a bit confusingly, you must install Jupyter using `pip` (or `conda` or whatever you've chosen to manage Python packages). If you have multiple versions of Python installed, you have to choose which version will be the one running Jupyter. I generally choose whatever the latest version I have installed at the time. Run the following commands to install Jupyter. We will be installing Jupyter using Python 3.8.1, but, to reiterate, you can choose whichever version you want.
 
@@ -167,4 +168,4 @@ sudo /path/to/env_name/bin/pip install ipykernel
 
 ## Conclusion
 
-Wow, we went over a lot. Hopefully you understand by the end of this opinionated guide how to set-up Python, Jupyter, `pip`, and `virtualenv` for your system. You should feel confident and ready to start programming in Python! Check out my `setup_python.sh` script to see how I set-up Python at home. Make sure you add the directory where you want Python installed when calling the script e.g. `./setup_python.sh /opt/python/3.8.1`.
+Wow, we went over a lot. Hopefully you understand by the end of this opinionated guide how to set-up Python, Jupyter, `pip`, and `virtualenv` for your system. You should feel confident and ready to start programming in Python!
