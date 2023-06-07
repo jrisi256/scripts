@@ -93,8 +93,8 @@ sudo apt update
 sudo apt install zotero
 
 # Install Obsidian
-wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.3.5/obsidian_1.3.5_amd64.deb
-sudo dpkg -i install obsidian_1.3.5_amd64.deb
+curl -L -O https://github.com/obsidianmd/obsidian-releases/releases/download/v1.3.5/obsidian_1.3.5_amd64.deb
+sudo dpkg -i obsidian_1.3.5_amd64.deb
 rm obsidian_1.3.5_amd64.deb
 
 # I downloaded Spotify, OnlyOffice, and Discord from the Ubuntu App Store.

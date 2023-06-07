@@ -25,9 +25,48 @@ The most laborious part of the setup is tweaking the settings in Zotero and Obsi
 
 ### Zotero settings
 
+To access the advanced settings in Zotero, Edit, Preferences, Advanced, Config Editor.
+
+* **extensions.zotero.export.quickCopy.setting**: When you *quick copy* an item, this setting controls what the default bibliography formatting style should be. I change this to the appropriate format. The much easier way of setting this setting is Edit, Preferences, Export, and then choose the formatting style you would like.
+* **extensions.zotero.recursiveCollections**: This setting allows for all items in a sub-collection to be viewed in the parent collection. I set this value to true.
+
+### Mdnotes placeholders and template files
+
+Mdnotes is a powerful for exporting your notes and annotations from a paper into markdown. Zotero has made great strides in terms of making this functionality available in base Zotero (both in terms of extracting annotations and exporting your notes as markdown). It has gotten so good that the Mdnotes and Zotfile plugins may not be totally necessary anymore. Regardless, I started out using this plugin based workflow, and I will stick with it for the time being.
+
+Mdnotes provides a lot of functionality for how you want Zotero to export your notes to markdown. You can specify exactly how your notes should be exported using templates. The template files for Mdnotes are included in this directory. These template files need to be pointed to within the Mdfiles settings within Zotero. This ensures that notes and papers are properly imported into Obsidian.
+
+Specifically, Mdnotes templates work using *placeholders* which is a Mdnotes specific idea. Placeholders are a way to refer to Zotero-specific metadata about the notes you are exporting, and then subsequently structure them as you see fit. Below I will detail the specific placeholders I setup in the Config Editor for Zotero.
+
+I will not be explaining here what these settings do exactly. Suffice to say, they create new placeholders or modify existing placeholders so that when I reference them in my template, they are in the exact format I want.
+
+* **extensions.mdnotes.placeholder.abstractNote**: {"content":"## Abstract\n\n{{field_contents}}", "field_contents": "{{content}}", "link_style": "no-links", "list_separator": ", "}
+* **extensions.mdnotes.placeholder.author**: {"content":"{{field_contents}}", "link_style": "no-links", "list_separator": ", "}
+* **extensions.mdnotes.placeholder.authorYaml**: {"content":"[{{field_contents}}]", "zotero_field":"author", "link_style": "no-links", "list_separator": ", "}
+* **extensions.mdnotes.placeholder.citekey**: {"content":"{{field_contents}}", "field_contents": "{{content}}", "link_style": "no-links"}
+* **extensions.mdnotes.placeholder.date**: {"content":"{{field_contents}}", "link_style": "no-links", "list_separator": ", "}
+* **extensions.mdnotes.placeholder.issue**: {"content":"{{field_contents}}", "link_style": "no-links", "list_separator": ", "}
+* **extensions.mdnotes.placeholder.itemTypeYaml**: {"content":"[{{field_contents}}]", "link_style": "no-links", "list_separator": ", ", "zotero_field":"itemType"}
+* **extensions.mdnotes.placeholder.noteContent**: {"content":"{{field_contents}}", "link_style":"markdown"}
+* **extensions.mdnotes.placeholder.notes**: {"content":"{{field_contents}}", "field_contents": "{{content}}", "link_style": "wiki", "list_separator": "\n- "}
+* **extensions.mdnotes.placeholder.pages**: {"content":"{{field_contents}}", "link_style": "no-links", "list_separator": ", "}
+* **extensions.mdnotes.placeholder.pdfAttachments**: {"content":"{{field_contents}}", "field_contents": "{{content}}", "list_separator": "\n\t- "}
+* **extensions.mdnotes.placeholder.publicationTitle**: {"content":"{{field_contents}}", "link_style": "no-links", "list_separator": ", "}
+* **extensions.mdnotes.placeholder.publicationTitleYaml**: {"content":"[{{field_contents}}]", "link_style": "no-links", "list_separator": ", ", "zotero_field":"publicationTitle"}
+* **extensions.mdnotes.placeholder.tags**: {"content":"{{field_contents}}", "field_contents": "#{{content}}", "link_style": "no-links", "list_separator": ", ", "remove_spaces": "true"}
+* **extensions.mdnotes.placeholder.title**: {"content": "{{field_contents}}", "link_style": "no-links"}
+* **extensions.mdnotes.placeholder.url**: {"content":"{{field_contents}}", "field_contents": "{{content}}"}
+* **extensions.mdnotes.placeholder.volume**: {"content":"{{field_contents}}", "link_style": "no-links", "list_separator": ", "}
+
+#### Mdnotes preferences
+
+If you click on Tools and then Mdnotes preferences, you will be able to set a bunch of settings.
+
+* Change *File Organization* to *Single file*. In the Config Editor, it would be changing **extensions.mdnotes.file_conf** to single.
+* Change *Internal Links* to *No links*. In the Config Editor, it would be changing **extensions.mdnotes.link_style** to none.
+* Set the appropriate *export directory* (e.g., /home/joe/Documents/obsidian/joe_shack_home). In the Config Editor, it would be changing **extensions.mdnotes.directory** to the appropriate directory.
+* Set the appropriate *Template folder* (/home/joe/Documents/scripts/zotero_obsidian). In the Config Editor, it would be changing **extensions.mdnotes.templates.directory** to the appropriate directory.
+* Make sure *Attach file links to Zotero* is checked off. In the Config Editor, it would be changing **extensions.mdnotes.attach_to_zotero** to false.
+
 ### Obsidian settings
 
-### Mdnotes Template files
-
-* The template files for mdnotes are included in this directory. These template files need to be pointed to within the Mdfiles settings within Zotero. This ensures that notes and papers are properly imported into Obsidian.
-* 
