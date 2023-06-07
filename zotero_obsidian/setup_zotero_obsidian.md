@@ -30,7 +30,23 @@ To access the advanced settings in Zotero, Edit, Preferences, Advanced, Config E
 * **extensions.zotero.export.quickCopy.setting**: When you *quick copy* an item, this setting controls what the default bibliography formatting style should be. I change this to the appropriate format. The much easier way of setting this setting is Edit, Preferences, Export, and then choose the formatting style you would like.
 * **extensions.zotero.recursiveCollections**: This setting allows for all items in a sub-collection to be viewed in the parent collection. I set this value to true.
 
-### Mdnotes placeholders and template files
+#### Zotfile settings
+
+Change some hidden options in the Config Editor:
+
+* **extensions.zotfile.tablet.tag**: No value.
+* **extensions.zotfile.tablet.tagModified**: No value.
+* **extensions.zotfile.tablet.tagParentPull_tag**: No value.
+
+Then go into Tools, ZotFile Preferences, Tablet Settings:
+
+* Click *Use ZotFile to send and get files from tablet*.
+* Choose as a base folder: */Google Drive/Onyx Boox/Onyx Documents*.
+* Make sure *No subfolders* is selected.
+* Make sure *Rename files when they are sent to the tablet** is not selected.
+* Make sure *Automatically extract annotations when getting PDFs back from tablet* is selected.
+
+#### Mdnotes placeholders and template files
 
 Mdnotes is a powerful for exporting your notes and annotations from a paper into markdown. Zotero has made great strides in terms of making this functionality available in base Zotero (both in terms of extracting annotations and exporting your notes as markdown). It has gotten so good that the Mdnotes and Zotfile plugins may not be totally necessary anymore. Regardless, I started out using this plugin based workflow, and I will stick with it for the time being.
 
