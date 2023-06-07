@@ -87,13 +87,10 @@ sudo add-apt-repository ppa:christian-boxdoerfer/fsearch-stable
 sudo apt update
 sudo apt install fsearch
 
-# Zotero
-wget -O zotero.tar "https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64&version=5.0.96.3"
-tar -xvf zotero.tar
-rm zotero.tar
-sudo mv Zotero_linux-x86_64 /opt
-/opt/Zotero_linux-x86_64/set_launcher_icon
-ln -s /opt/Zotero_linux-x86_64/zotero.desktop ~/.local/share/applications/zotero.desktop
+# Zotero, need to install using .deb file otherwise it will not work with Obsidian
+curl -L https://raw.githubusercontent.com/retorquere/zotero-deb/master/install.sh | sudo bash
+sudo apt update
+sudo apt install zotero
 
 # Install Obsidian
 wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.3.5/obsidian_1.3.5_amd64.deb
