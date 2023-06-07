@@ -38,7 +38,14 @@ Mdnotes provides a lot of functionality for how you want Zotero to export your n
 
 Specifically, Mdnotes templates work using *placeholders* which is a Mdnotes specific idea. Placeholders are a way to refer to Zotero-specific metadata about the notes you are exporting, and then subsequently structure them as you see fit. Below I will detail the specific placeholders I setup in the Config Editor for Zotero.
 
-I will not be explaining here what these settings do exactly. Suffice to say, they create new placeholders or modify existing placeholders so that when I reference them in my template, they are in the exact format I want.
+I will not be explaining here what these settings do exactly. Suffice to say, they create new placeholders or modify existing placeholders so that when I reference them in my template, they are in the exact format I want. If you wish to learn more or remind yourself of what you did here, you should consult the following links from the official Mdnotes documentation:
+
+* [The default template from Mdnotes](https://argentinaos.com/zotero-mdnotes/docs/advanced/templates/defaults/).
+* [Template for single-file workflow](https://argentinaos.com/zotero-mdnotes/docs/advanced/templates/single-file).
+* [A guide to placeholders](https://argentinaos.com/zotero-mdnotes/docs/advanced/placeholders/).
+* [Creating your own placeholders](https://argentinaos.com/zotero-mdnotes/docs/advanced/formatting/).
+
+Here are the settings I created:
 
 * **extensions.mdnotes.placeholder.abstractNote**: {"content":"## Abstract\n\n{{field_contents}}", "field_contents": "{{content}}", "link_style": "no-links", "list_separator": ", "}
 * **extensions.mdnotes.placeholder.author**: {"content":"{{field_contents}}", "link_style": "no-links", "list_separator": ", "}
@@ -70,3 +77,18 @@ If you click on Tools and then Mdnotes preferences, you will be able to set a bu
 
 ### Obsidian settings
 
+* Settings (Gear), Editor:
+  * **Show frontmatter**: Turn on.
+  * **Show line number**: Turn on.
+* Settings (Gear), Files & Links:
+  * **Confirm file deletion**: Turn off.
+  * **Detect file extensions**: Turn on.
+* Settings (Gear), Core plugins:
+  * **Audio recorder**: Turn on.
+  * **Daily notes**: Turn off.
+  * **Slash commands**: Turn on.
+  * **Slides**: Turn on.
+* Settings (Gear), Core Plugins (Quick switcher):
+  * **Show all file types**: Turn on.
+* Settings (Gear), Community Plugins (Zotero Integration):
+  * **Enable Cite Key Autocomplete**: Turn on.
