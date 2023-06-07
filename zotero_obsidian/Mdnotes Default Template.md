@@ -6,6 +6,9 @@ journal: {{publicationTitleYaml}}
 date: {{date}}
 ---
 
+* **Creation date**: `= this.file.ctime`
+* **Last modified date**: `= this.file.mtime`
+
 ## Metadata
 
 * **Author(s)**: {{author}}
