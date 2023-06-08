@@ -1,5 +1,4 @@
 ---
-alias: {{citekey}}
 type: {{itemTypeYaml}}
 author: {{authorYaml}}
 journal: {{publicationTitleYaml}}

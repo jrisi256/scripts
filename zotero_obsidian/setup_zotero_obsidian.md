@@ -44,7 +44,7 @@ Then go into Tools, ZotFile Preferences, Tablet Settings:
 * Choose as a base folder: */Google Drive/Onyx Boox/Onyx Documents*.
 * Make sure *No subfolders* is selected.
 * Make sure *Rename files when they are sent to the tablet** is not selected.
-* Make sure *Automatically extract annotations when getting PDFs back from tablet* is selected.
+* Make sure *Automatically extract annotations when getting PDFs back from tablet* is not selected.
 
 #### Mdnotes placeholders and template files
 
