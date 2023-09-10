@@ -54,6 +54,7 @@ sudo apt install drawing
 sudo apt install gnome-tweaks
 sudo apt install vim
 sudo apt install checkinstall
+sudo apt install fuse libfuse2
 
 # Notify me when a program running in the terminal completes.
 sudo apt install undistract-me
