@@ -94,9 +94,9 @@ sudo apt update
 sudo apt install zotero
 
 # Install Obsidian
-curl -L -O https://github.com/obsidianmd/obsidian-releases/releases/download/v1.3.5/obsidian_1.3.5_amd64.deb
-sudo dpkg -i obsidian_1.3.5_amd64.deb
-rm obsidian_1.3.5_amd64.deb
+curl -L -O https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.13/obsidian_1.4.13_amd64.deb
+sudo dpkg -i obsidian_1.4.13_amd64.deb
+rm obsidian_1.4.13_amd64.deb
 
 # I downloaded Spotify, OnlyOffice, and Discord from the Ubuntu App Store.
 # For VS Code, I downloaded the .deb file from their website. Then, I installed used gdebi.
