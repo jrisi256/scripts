@@ -39,6 +39,9 @@ sudo apt install texlive-base texlive-science texlive texlive-latex-recommended 
 # Install necessary packages for devtools.
 sudo apt install libharfbuzz-dev libfribidi-dev
 
+# Necessary for copying/pasting banner comments from bannerCommenter R package
+sudo apt install xclip
+
 ############################################################################### Programs
 # Various programs and system utilities. 
 sudo apt install git
