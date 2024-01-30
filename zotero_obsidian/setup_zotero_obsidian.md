@@ -9,6 +9,7 @@ To download any of these plugins, refer to the script I have set up. Then, insta
 * [Better Bibtex](https://retorque.re/zotero-better-bibtex/). This plugin is used used for generating unique citation keys to be able to uniquely reference and find any research paper.
 * [Mdnotes](https://argentinaos.com/zotero-mdnotes/). This plugin intelligently exports Zotero metadata, notes, and annotations as markdown files which we can then integrate into Obsidian.
 * [Zotfile](http://zotfile.com/). This plugin manages the attachments of a specific source. Specifically, it allows for the automatic renaming, moving, and attaching of PDFs (or other files) to Zotero items. It is also useful for syncing PDFs from your Zotero library to your (mobile) PDF reader (e.g. an iPad, Android tablet, etc.).
+* * [Inciteful](https://inciteful.xyz/). This plugin is not actually related to making Zotero and Obsidian play nice with each other. It is a new tool I found that helps with literature reviews.
 
 ## Obsidian plugins
 
