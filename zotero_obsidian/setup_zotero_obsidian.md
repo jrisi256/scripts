@@ -47,6 +47,10 @@ Then go into Tools, ZotFile Preferences, Tablet Settings:
 * Make sure *Rename files when they are sent to the tablet** is not selected.
 * Make sure *Automatically extract annotations when getting PDFs back from tablet* is not selected.
 
+Then go into Tools, ZotFile Preferences, Renaming Rules:
+
+* Change the format of the renaming rules to be: `%b`. This ensures all PDF files get automatically renamed to their Bibtex key.
+
 #### Mdnotes placeholders and template files
 
 Mdnotes is a powerful for exporting your notes and annotations from a paper into markdown. Zotero has made great strides in terms of making this functionality available in base Zotero (both in terms of extracting annotations and exporting your notes as markdown). It has gotten so good that the Mdnotes and Zotfile plugins may not be totally necessary anymore. Regardless, I started out using this plugin based workflow, and I will stick with it for the time being.
