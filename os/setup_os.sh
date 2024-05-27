@@ -71,6 +71,15 @@ wget https://dystroy.org/broot/download/x86_64-linux/broot
 chmod +x broot
 mv broot /usr/local/bin
 
+# Download Anki Flash Cards
+wget https://github.com/ankitects/anki/releases/download/24.04.1/anki-24.04.1-linux-qt6.tar.zst
+tar xaf anki-24.04.1-linux-qt6
+cd anki-24.04.1-linux-qt6/
+sudo ./install.sh
+
+# Download pinyin tone keyboard.
+sudo apt install ibus-m17n
+
 # Get rid of annoying Ubuntu advertising.
 sudo pro config set apt_news=false
 sudo rm /etc/apt/apt.conf.d/20apt-esm-hook.conf
