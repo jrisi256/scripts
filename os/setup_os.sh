@@ -72,6 +72,7 @@ chmod +x broot
 mv broot /usr/local/bin
 
 # Download Anki Flash Cards
+sudo apt install libxcb-cursor0
 wget https://github.com/ankitects/anki/releases/download/24.04.1/anki-24.04.1-linux-qt6.tar.zst
 tar xaf anki-24.04.1-linux-qt6
 cd anki-24.04.1-linux-qt6/
