@@ -11,7 +11,7 @@ To download any of these plugins, refer to the script I have set up. Then, insta
 * [Zotfile](http://zotfile.com/). This plugin manages the attachments of a specific source. Specifically, it allows for the automatic renaming, moving, and attaching of PDFs (or other files) to Zotero items. It is also useful for syncing PDFs from your Zotero library to your (mobile) PDF reader (e.g. an iPad, Android tablet, etc.).
 * * [Inciteful](https://inciteful.xyz/). This plugin is not actually related to making Zotero and Obsidian play nice with each other. It is a new tool I found that helps with literature reviews. **Note** that I found only version 0.0.8 works with Zotero 7 and not the latest version (0.0.9 as of this writing).
 
-**Update for 2024, Zotero 7**: Both mdnotes and zotfile have stopped working due to the Zotero 7 upddate. As a result, I no longer use these plugins in my workflow.
+**Update for 2024, Zotero 7**: Both mdnotes and zotfile have stopped working due to the Zotero 7 upddate. As a result, I no longer use these plugins in my workflow. Some interesting plugins which are being billed as a replacements to Zotfile are: [ZotMoov](https://github.com/wileyyugioh/zotmoov) and [PDF Custom Rename](https://github.com/Theigrams/zotero-pdf-custom-rename?tab=readme-ov-file). Setting up Google Drive Cloud Storage on Ubuntu is a bit of a pain so ZotMoov is not super useful for me at this point in time. The PDF Custom Rename plugin also seems to largely duplicate the functionality already present in Zotero. Future updates may make it more useful.
 
 ## Obsidian plugins
 
@@ -28,6 +28,15 @@ Installing plugins for Obsidian is done through their interface, and it is prett
 The most laborious part of the setup is tweaking the settings in Zotero and Obsidian to get the exact right behavior I would like. Below, I will detail as best as I can the settings I have changed from the defaults to get the behaviors I like.
 
 ### Zotero settings
+
+#### General
+
+Go to Edit -> Settings -> General.
+
+* Uncheck "Automatically take snapshots when creating items from web pages."
+* Change the "Customize Filename Format" to match the Bibtex key. **Note that as of December 2024, this has not been implemented in any plugins, and I have not taken the time to figure out how to match Zotero's name generator to Better Bibtex. Renaming PDFs is not really that important, and it would just be an aesthetic thing at this point.**
+
+#### Advanced
 
 To access the advanced settings in Zotero, Edit, Preferences, Advanced, Config Editor.
 
