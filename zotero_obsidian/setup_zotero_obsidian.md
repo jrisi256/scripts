@@ -132,11 +132,12 @@ If you click on Tools and then Mdnotes preferences, you will be able to set a bu
   * Set the default folder where notes will be stored.
   * Finally set the template for how notes will be created. This is my preferred template:
 
-> {{citekey}}  
-> title: "{{title}}"  
-> author: {{authorString}}  
-> year: {{year}}  
-> journal: {{containerTitle}}  
-> Zotero entry {{zoteroSelectURI}}  
-> Abstract  
-> {{abstract}}  
+> title: "{{title}}"
+> author: {{authorString}}
+> year: {{year}}
+> journal: {{containerTitle}}
+> type: {{entry.type}}
+> [Zotero entry]({{zoteroSelectURI}})
+> **Tags**:
+> ## Abstract
+> {{abstract}}
