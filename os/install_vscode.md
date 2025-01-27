@@ -33,3 +33,7 @@ There are a number of extensions I've added to Visual Studio Code overtime to im
 ## Python
 
 * Official Python support from Microsoft, `ext install ms-python.python`
+
+## Data Wrangler
+
+* Allows one to view their data and generate code interactively to perform data cleaning operations, search `Data Wrangler`.
