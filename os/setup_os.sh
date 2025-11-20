@@ -2,7 +2,7 @@
 
 ################################################################################ System-level dependencies for R and Python.
 # Install system dependencies for Python and R.
-sudo apt install curl
+sudo apt install curl libgit2-dev pandoc
 
 ########################################### Python
 # Install system dependencies for Python.
