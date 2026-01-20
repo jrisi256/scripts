@@ -18,7 +18,6 @@ To download any of these plugins, refer to the script I have set up. Then, insta
 Installing plugins for Obsidian is done through their interface, and it is pretty easy and straightforward.
 
 * [Zotero Integration](https://github.com/mgmeyers/obsidian-zotero-integration). This is the newer plugin and seems like the one I should be using. It allows for links to be clicked on within Obsidian and the corresponding paper or note should open up in Zotero.
-* [Dataview][https://blacksmithgu.github.io/obsidian-dataview/]. This turns your Obsidian vault into a database which you can run queries on.
 * [Better Word Count](https://github.com/lukeleppan/better-word-count). This is a nice little plugin which improves upon the built-in word counter from Obsidian. The thing I like most about it is that it allows for tracking of other items other than words and characters (e.g., sentences). It also will dynamically update to keep track of the number of characters/words of highlighted sections.
 * [Excalidraw](https://github.com/zsviczian/obsidian-excalidraw-plugin). This is a great plugin for creating custom drawings as well as entire canvases.
 * [Citations](https://github.com/hans/obsidian-citation-plugin). This has replaced Zotfile + Mdnotes for me. It is not as feature-rich, but it accomplishes the job I want. Namely, it is able to easily create a note using metadata from Zotero for a specific article.
