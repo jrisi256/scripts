@@ -4,12 +4,13 @@ This is a guide for getting Obsidian and Zotero to work together.
 
 ## Zotero plugins
 
-To download any of these plugins, refer to the script I have set up. Then, install the plugin into Zotero (Tools, Add-ons, Install Add-on From File...).
+To download any of these plugins, visit their Github Page. Then, install the plugin into Zotero (Tools, Plugins, Install Add-on From File...).
 
 * [Better Bibtex](https://retorque.re/zotero-better-bibtex/). This plugin is used used for generating unique citation keys to be able to uniquely reference and find any research paper.
-* [Mdnotes](https://argentinaos.com/zotero-mdnotes/). This plugin intelligently exports Zotero metadata, notes, and annotations as markdown files which we can then integrate into Obsidian.
-* [Zotfile](http://zotfile.com/). This plugin manages the attachments of a specific source. Specifically, it allows for the automatic renaming, moving, and attaching of PDFs (or other files) to Zotero items. It is also useful for syncing PDFs from your Zotero library to your (mobile) PDF reader (e.g. an iPad, Android tablet, etc.).
-* * [Inciteful](https://inciteful.xyz/). This plugin is not actually related to making Zotero and Obsidian play nice with each other. It is a new tool I found that helps with literature reviews. **Note** that I found only version 0.0.8 works with Zotero 7 and not the latest version (0.0.9 as of this writing).
+* ~~[Mdnotes](https://argentinaos.com/zotero-mdnotes/). This plugin intelligently exports Zotero metadata, notes, and annotations as markdown files which we can then integrate into Obsidian.~~
+* ~~[Zotfile](http://zotfile.com/). This plugin manages the attachments of a specific source. Specifically, it allows for the automatic renaming, moving, and attaching of PDFs (or other files) to Zotero items. It is also useful for syncing PDFs from your Zotero library to your (mobile) PDF reader (e.g. an iPad, Android tablet, etc.).~~
+* [Inciteful](https://inciteful.xyz/). This plugin is not actually related to making Zotero and Obsidian play nice with each other. It is a new tool I found that helps with literature reviews.
+* [MarkDB-Connect](https://github.com/daeh/zotero-markdb-connect). This plugin scans a specific folder to find matching markdown files for each of your papers in Zotero using the cite key. I find it extremely helpful as it now allows me to see which papers I have notes for within Zotero (and then open them in Obsidian).
 
 **Update for 2024, Zotero 7**: Both mdnotes and zotfile have stopped working due to the Zotero 7 upddate. As a result, I no longer use these plugins in my workflow. Some interesting plugins which are being billed as a replacements to Zotfile are: [ZotMoov](https://github.com/wileyyugioh/zotmoov) and [PDF Custom Rename](https://github.com/Theigrams/zotero-pdf-custom-rename?tab=readme-ov-file). Setting up Google Drive Cloud Storage on Ubuntu is a bit of a pain so ZotMoov is not super useful for me at this point in time. The PDF Custom Rename plugin also seems to largely duplicate the functionality already present in Zotero. Future updates may make it more useful.
 
@@ -106,6 +107,17 @@ If you click on Tools and then Mdnotes preferences, you will be able to set a bu
 * Set the appropriate *export directory* (e.g., /home/joe/Documents/obsidian/joe_shack_home). In the Config Editor, it would be changing **extensions.mdnotes.directory** to the appropriate directory.
 * Set the appropriate *Template folder* (/home/joe/Documents/scripts/zotero_obsidian). In the Config Editor, it would be changing **extensions.mdnotes.templates.directory** to the appropriate directory.
 * Make sure *Attach file links to Zotero* is checked off. In the Config Editor, it would be changing **extensions.mdnotes.attach_to_zotero** to false.
+
+#### Mark-DB Connect
+
+* The first step is to make sure it is scanning your Obsidian directory with all of your literature notes.
+* Instead of using the default file filter, I use the custom filter because my markdown notes do not begin with @. The default file filter expects your markdown notes to begin with @. The regular expression I use is quite simple, though. It simply matches all markdown files beginning with non-whitespace characters:
+
+  ```regular expression
+  ^(\S+).*\.md$
+  ```
+
+* Then I make sure the Markdown Files are opened using Obsidian.
 
 ### Obsidian settings
 
